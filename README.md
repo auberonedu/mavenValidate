@@ -1,5 +1,7 @@
 # mavenValidate
 
+# Everything Works!
+
 A repo to test your installation of Maven.
 
 Please validate that the below work. If things aren't working, see the Notes section.

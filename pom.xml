@@ -1,10 +1,12 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
                              https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+  <!-- Naming convention that its just the url backwards -->
+  <!-- What it fo tho -->
   <groupId>io.github.auberonedu</groupId>
+  <!-- name of it -->
   <artifactId>mavenValidate</artifactId>
+  <!-- Changes per release -->
   <version>1.0-SNAPSHOT</version>
 
   <properties>
@@ -13,13 +15,21 @@
   </properties>
 
   <dependencies>
-  <!-- JFreeChart for plotting -->
+
+    <!-- https://mvnrepository.com/artifact/com.orsonpdf/orsonpdf -->
+    <dependency>
+      <groupId>com.orsonpdf</groupId>
+      <artifactId>orsonpdf</artifactId>
+      <version>1.9.1</version>
+    </dependency>
+    
+    <!-- JFreeChart for plotting -->
     <dependency>
       <groupId>org.jfree</groupId>
       <artifactId>jfreechart</artifactId>
       <version>1.5.3</version>
     </dependency>
-    
+
     <!-- JUnit Jupiter -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -28,6 +38,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
 
   <build>
     <plugins>

@@ -1,3 +1,8 @@
+sdev334
+coder: Jonathan Sule
+project: install and validate Maven framework
+date: April 30, 2025
+
 # mavenValidate
 
 A repo to test your installation of Maven.

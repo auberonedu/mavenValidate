@@ -7,6 +7,11 @@ import org.jfree.data.time.TimeSeriesCollection;
 import java.time.LocalDate;
 import java.util.Random;
 
+import com.orsonpdf.PDFDocument;
+import com.orsonpdf.Page;
+import java.awt.Rectangle;
+import java.io.File;
+
 /**
  * Entry point: builds some example data, creates the chart, and displays it.
  */
@@ -17,7 +22,7 @@ public class App {
         DataModel model = new DataModel();
         LocalDate start = LocalDate.now();
         Random rand = new Random();
-        double value = rand.nextDouble() * 10;  // Start somewhere between 0 and 10
+        double value = rand.nextDouble() * 10; // Start somewhere between 0 and 10
 
         // Generate 10 points that mostly increase over time
         for (int i = 0; i < 10; i++) {
@@ -30,6 +35,16 @@ public class App {
         TimeSeriesCollection dataset = model.getDataset();
         ChartGenerator generator = new ChartGenerator();
         JFreeChart chart = generator.createChart(dataset);
+
+        // PDF
+        PDFDocument pdfDoc = new PDFDocument();
+        int width = 600;
+        int height = 400;
+        Rectangle bounds = new Rectangle(width, height);
+        Page g2 = pdfDoc.createPage(bounds);
+        chart.draw(g2.getGraphics2D(), bounds);
+        File outputFile = new File("mavenUnderstanding.pdf");
+        pdfDoc.writeToFile(outputFile);
 
         // Display
         displayChart(chart);

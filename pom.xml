@@ -14,11 +14,12 @@
 
   <dependencies>
   <!-- JFreeChart for plotting -->
-    <dependency>
-      <groupId>org.jfree</groupId>
-      <artifactId>jfreechart</artifactId>
-      <version>1.5.3</version>
-    </dependency>
+  <!-- https://mvnrepository.com/artifact/com.orsonpdf/orsonpdf -->
+  <dependency>
+      <groupId>com.orsonpdf</groupId>
+      <artifactId>orsonpdf</artifactId>
+      <version>1.9.1</version>
+  </dependency>
     
     <!-- JUnit Jupiter -->
     <dependency>

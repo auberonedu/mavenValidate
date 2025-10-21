@@ -18,7 +18,7 @@ Please validate that the below work. If things aren't working, see the Notes sec
 1. Run the tests with the testing side panel in VS Code.
 
 ## Notes
-1. Do not worry about any warning messages so long as it all works
+1. Do not worry about any warning messages so long as it all work`s
 1. The extensions may take a long time to begin recognizing everything.
 1. There is a fair amount of data that will be downloaded the first time you run each of the commands.
 1. If the `mvn` commands aren't working in VS Code's built in terminal, try them in a separate terminal.

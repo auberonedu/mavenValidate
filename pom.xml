@@ -27,8 +27,15 @@
       <version>5.10.0</version>
       <scope>test</scope>
     </dependency>
-  </dependencies>
 
+    <!-- https://mvnrepository.com/artifact/com.orsonpdf/orsonpdf -->
+    <dependency>
+        <groupId>com.orsonpdf</groupId>
+        <artifactId>orsonpdf</artifactId>
+        <version>1.9.1</version>
+    </dependency>
+  </dependencies>
+  
   <build>
     <plugins>
       <!-- Surefire -->

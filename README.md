@@ -6,11 +6,15 @@ Please validate that the below work. If things aren't working, see the Notes sec
 
 ## Validation Steps
 
-1. Run the code with the below command works. If it's working properly, you should see a graph show up.
+1. Run the below command to compile the code. It should run without error:
+    ```
+    mvn compile
+    ```
+1. Run the code with the below command. If it's working properly, you should see a graph show up.
     ```
     mvn exec:java
     ```
-1. Run the tests with the below command works. If it's working properly, you should see test results in the terminal.
+1. Run the tests with the below comman. If it's working properly, you should see test results in the terminal.
     ```
     mvn test
     ```

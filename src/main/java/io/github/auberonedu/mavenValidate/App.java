@@ -1,5 +1,8 @@
 package io.github.auberonedu.mavenValidate;
-
+import com.orsonpdf.PDFDocument;
+import com.orsonpdf.Page;
+import java.awt.Rectangle;
+import java.io.File;
 import javax.swing.JFrame;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -30,6 +33,15 @@ public class App {
         TimeSeriesCollection dataset = model.getDataset();
         ChartGenerator generator = new ChartGenerator();
         JFreeChart chart = generator.createChart(dataset);
+
+        PDFDocument pdfDoc = new PDFDocument();
+        int width = 600;
+        int height = 400;
+        Rectangle bounds = new Rectangle(width, height);
+        Page g2 = pdfDoc.createPage(bounds);
+        chart.draw(g2.getGraphics2D(), bounds);
+        File outputFile = new File("mavenUnderstanding.pdf");
+        pdfDoc.writeToFile(outputFile);
 
         // Display
         displayChart(chart);

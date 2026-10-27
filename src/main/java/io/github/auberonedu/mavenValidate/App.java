@@ -1,11 +1,17 @@
 package io.github.auberonedu.mavenValidate;
 
+import java.io.File;
+import java.time.LocalDate;
+import java.util.Random;
+
 import javax.swing.JFrame;
+
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.time.TimeSeriesCollection;
-import java.time.LocalDate;
-import java.util.Random;
+
+import com.orsonpdf.PDFDocument;
+import com.orsonpdf.Page;
 
 /**
  * Entry point: builds some example data, creates the chart, and displays it.
@@ -31,6 +37,14 @@ public class App {
         ChartGenerator generator = new ChartGenerator();
         JFreeChart chart = generator.createChart(dataset);
 
+        PDFDocument pdfDoc = new PDFDocument();
+        int width = 600;
+        int height = 400;
+        Rectangle bounds = new Rectangle(width, height);
+        Page g2 = pdfDoc.createPage(bounds);
+        chart.draw(g2.getGraphics2D(), bounds);
+        File outputFile = new File("mavenUnderstanding.pdf");
+        pdfDoc.writeToFile(outputFile);
         // Display
         displayChart(chart);
     }

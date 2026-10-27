@@ -13,6 +13,14 @@
   </properties>
 
   <dependencies>
+<!-- https://mvnrepository.com/artifact/com.orsonpdf/orsonpdf -->
+<dependency>
+    <groupId>com.orsonpdf</groupId>
+    <artifactId>orsonpdf</artifactId>
+    <version>1.9.1</version>
+</dependency>
+
+
   <!-- JFreeChart for plotting -->
     <dependency>
       <groupId>org.jfree</groupId>

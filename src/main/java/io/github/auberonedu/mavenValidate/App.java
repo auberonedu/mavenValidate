@@ -7,6 +7,8 @@ import org.jfree.data.time.TimeSeriesCollection;
 import java.time.LocalDate;
 import java.util.Random;
 
+
+
 /**
  * Entry point: builds some example data, creates the chart, and displays it.
  */

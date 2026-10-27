@@ -12,7 +12,6 @@ import java.util.Random;
 import com.orsonpdf.PDFDocument;
 import com.orsonpdf.Page;
 import java.awt.Rectangle;
-import java.io.File;
 
 
 /**
